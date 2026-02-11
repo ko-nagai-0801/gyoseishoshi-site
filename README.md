@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 山田行政書士事務所 デモサイト
 
-## Getting Started
+行政書士事務所のデモサイトです。Next.js + Tailwind CSS で構築し、Vercel でホスティングしています。
 
-First, run the development server:
+> **注意**: これはデモサイトです。実在の事務所とは関係ありません。
+
+## デモ
+
+https://gyoseishoshi-site.vercel.app
+
+## 技術スタック
+
+- **Next.js 15** (App Router)
+- **Tailwind CSS v4**
+- **TypeScript**
+- **Vercel** (ホスティング)
+
+## ページ構成
+
+| ページ | パス | 内容 |
+|--------|------|------|
+| トップ | `/` | ヒーロー、サービス概要、事務所の強み、アクセス情報 |
+| サービス紹介 | `/services` | 取扱業務一覧（許認可・会社設立・相続・在留資格 等） |
+| 事務所概要 | `/about` | 代表挨拶、事務所理念、事務所情報、沿革 |
+| お問い合わせ | `/contact` | お問い合わせフォーム（フロントのみ） |
+
+## デザイン
+
+- **カラー**: プライマリ=#1B3A5C（紺）、アクセント=#C8A45C（金）、背景=#F8F7F4（オフホワイト）
+- **フォント**: Noto Sans JP
+- **レスポンシブ**: モバイルファースト対応
+
+## ローカル開発
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+http://localhost:3000 でアクセスできます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ビルド
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## デプロイ
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GitHub の `main` ブランチに push すると Vercel へ自動デプロイされます。
